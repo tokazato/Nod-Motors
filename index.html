@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Nod Motors</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/media/img/logo.png" alt="Nod Motors logo" title="Nod Motors logo"></a>
+        <nav id="menu" class="header_navigation">
+            <ul id="header_ul" class="header_ul">
+                <li><a href="index.html">Cars</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="book" class="book" onclick="myFunction(this)" href="#">Book</a></li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="myFunction(this)">
+            <span class="burger__item1"></span>
+            <span class="burger__item2"></span>
+            <span class="burger__item3"></span>
+        </div>
+    </header>
+    <div id="contact_form" class="contact_form ">
+        <form action="#!" method="post" class="message_info">
+            <h1>Booking Form</h1>
+            <p>Includes Michelin Pilot Sport 4S tires</p>
+            <input type="text" name="firstname" placeholder="Name">
+            <input type="text" name="subject" placeholder="Subject">
+            <input type="text" name="email" placeholder="Email">
+            <textarea cols="22" rows="6" placeholder="Message"></textarea>
+            <a href="#" id="sendBtn" class="send">send</a>
+        </form>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="assets/media/img/check.icon.png" width="70px" height="70px" alt="check icon" title="check icon">
+                <h2 class="thank">Thank you!</h2>
+                <p>Your message has been sent successfully.</p>
+            </div>
+        </div>
+    </div>
+    <div class="hero">
+        <section class="hero_content">
+            <h1 class="hero_title">Tesla Model 3</h1>
+            <p class="hero_title_p">Luxury Fast</p>
+            <div class="main_pic_box"><a href="page2.html"><img class="main_pic" src="media/image/mainpic.png" alt="Tesla" title="Main pic tesla"></a></div> 
+            <ul class="hero_list">
+                <li>
+                    <p class="hero_li_p1">power:</p>
+                    <p>302 hp</p>
+                </li>
+                <li>
+                    <p class="hero_li_p1">top speed:</p>
+                    <p>200 km/ph</p>
+                </li>
+                <li>
+                    <p class="hero_li_p1">recharge</p>
+                    <p>after 1000km</p>
+                </li>
+            </ul>
+        </section>
+        <a class="down" href="#"><span class="hero_arrow"></span></a>
+    </div>
+    <section class="menu">
+        <h1>Available Cars</h1>
+        <p class="menu_h1_p" >Please Use for optimal results</p>
+        <form class="select_car" action="#" method="GET">
+            <div class="menu_select">
+                <select name="Manufacturer">
+                    <option value="Manufacturer">Manufacturer</option> 
+                    <option value="Tesla">Tesla</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Bmw">Bmw</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Hyundai">Hyundai</option>
+                </select>
+                <select name="Model">
+                    <option value="Model">Model</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Bmw">Bmw</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Hyundai">Hyundai</option>
+                </select>
+                <select name="Year">
+                        <option value="Year">Year</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                </select>
+            </div>
+            <div>
+                <select class="select_green"  name="20">
+                    <option value="20">20</option>
+                    <option value="40">40</option>
+                    <option value="60">60</option>
+                </select>
+            </div>
+        </form>
+            <ul class="cars">
+                <li class="tesla">
+                    <div>    
+                        <span class="from_price">from:</span><span class="price">59 000 $</span>
+                    </div>
+                    <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/1.png" alt="Tesla" title="Tesla 3"></a>
+                    <div class="colors">
+                        <span class="white" ></span>
+                        <span class="black"></span>
+                        <span class="red"></span>
+                    </div>
+                    <h2>Tesla Model 3</h2>
+                    <div>
+                        <span class="cars_hp">302 hp</span>
+                        <span class="cars_km">200 km/hp</span>
+                    </div>
+                </li>
+                <li class="tesla">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">79 000 $</span>
+                    </div>
+                    <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/2.png" alt="Tesla" title="Tesla 3S"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                    </div>
+                    <h2>Tesla Model 3S</h2>
+                    <div>
+                        <span class="cars_hp">343 hp</span>
+                        <span class="cars_km">252 km/hp</span>
+                    </div>
+                </li>
+                <li class="tesla">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">103 000 $</span>
+                    </div>
+                    <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/3.png" alt="Tesla" title="Tesla 3Z"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="orange"></span>
+                        <span class="gray"></span>
+                        <span class="green"></span>
+                    </div>
+                    <h2>Tesla Model 3Z</h2>
+                    <div>
+                        <span class="cars_hp">380 hp</span>
+                        <span class="cars_km">302 km/hp</span>
+                    </div>
+                </li>
+                <li class="bmw">
+                    <div>  
+                        <span class="from_price">from:</span><span class="price">61 000 $</span>
+                    </div>  
+                    <a href="page2.html"><img class="lazy gold_bmw_price" src="media/image/cover.jpeg" data-src="media/image/4.png" alt="BMW" title="BMW X2"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                        <span class="yellow"></span>
+                        <span class="gray"></span>
+                    </div>
+                        <h2>The first ever BMW X2</h2>
+                        <div>
+                        <span class="cars_hp">302 hp</span>
+                        <span class="cars_km">200 km/hp</span>
+                    </div>
+                </li>
+                <li class="bmw">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">92 000 $</span>
+                    </div>
+                    <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/5.png" alt="BMW" title="BMW M6"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                        <span class="blue"></span>
+                        <span class="gray"></span>
+                        <span class="pink"></span>
+                    </div>
+                    <h2>BMW M6 Gran Coupe</h2>
+                    <div>
+                        <span class="cars_hp">343 hp</span>
+                        <span class="cars_km">252 km/hp</span>
+                    </div>
+                </li>
+                <li class="bmw">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">132 000 $</span>
+                    </div>
+                    <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/6.png" alt="BMW" title="BMW X7"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                        <span class="gray"></span>
+                        <span class="blue"></span>
+                    </div>
+                    <h2>BMW X7</h2>
+                    <div>
+                        <span class="cars_hp">380 hp</span>
+                        <span class="cars_km">302 km/hp</span>
+                    </div>
+                </li>
+            </ul>
+    </section>
+    <footer>
+        <a href="#"><img src="assets/media/img/sa_logo.png" alt="Smart logo" title="Smart Logo"></a>
+        <p>&#169; nodmotors GE 2018</p>
+        <div class="contact">
+            <a href="#">(+995) 595 483 217</a>
+            <a href="#">info@nodmotors.ge</a> 
+        </div>
+    </footer>
+    <button id="back-to-top-btn" class="back-to-top-btn">
+        <span class="icon-arrow-up"><img src="assets/media/img/whitearrow.png" alt="Up" title="Up"></span>
+    </button>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

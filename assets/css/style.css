@@ -1,0 +1,1068 @@
+@font-face {
+    font-family: panton;
+    src: url(../fonts/pantonmtav3-bold.ttf);
+}
+@keyframes fadeIn {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes fadeUp {
+0% {
+    transform: translateY(4rem);
+    opacity: 0;
+}
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    max-width: 1084px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-family: panton;
+    font-weight: bold;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    z-index: 8;
+}
+.header_ul {
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+    position: relative;
+    z-index: 6;
+}
+header a img{
+    position: relative;
+    z-index: 5;
+}
+.book {
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: #FFF;
+    background-image: linear-gradient(#6AB04C,#BADC58);
+    transition: 0.3s ease;
+}
+.book:hover {
+    color: #fff;
+    transition: 0.3s ease;
+    font-size: 16px;
+}
+a {
+    color: #181818;
+    font-family: panton; 
+    font-size: 14px;
+    font-weight: bold;
+}
+a:hover {
+    color: #A1CE54;
+}
+.burger  {
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(#6AB04C,#BADC58);
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.burger__item1, .burger__item2, .burger__item3 {
+    width: 20px;
+    height: 3.33px;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+.burger__item2 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.change .burger__item1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.change .burger__item2 {opacity: 0;}
+
+.change .burger__item3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+.contact_form {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #FFF;
+    opacity: 0.95;
+    left: 0;
+    top: 0;
+    z-index: 7;
+}
+.contact_form.opencontact {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #FFF;
+    opacity: 0.95;
+    left: 0;
+    top: 0;
+    z-index: 7;
+}
+.message_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    animation: fadeIn .5s forwards;
+}
+.message_info h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.message_info p {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+.message_info input, textarea {
+    width: 216px;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 5px;
+    background: #E8F0F3;
+    margin-bottom: 10px;
+    outline: none;
+}
+.message_info textarea {
+    height: 60px;
+}
+.send {
+    width: 216px;
+    height: 30px;
+    background: linear-gradient(#6AB04C,#BADC58);
+    border-radius: 5px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.send:hover {
+    color: #fff;
+    font-size: 16px;
+}
+.modal {
+    display: none;
+}
+.close {
+    font-size: 40px;
+    cursor: pointer;
+    color: #181818;
+    position: relative;
+    bottom: 50px;
+    left: 100px;
+}
+.modal-content {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    animation: fadeIn .5s forwards;
+}
+.modal-content h1, .modal-content p {
+    text-align: center;
+    width: 174px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+.hero::before {
+    content: '';
+    background: #E8F0F3;
+    position: absolute;
+    height: 100vh;
+    width: 100%; 
+    top:0;
+    z-index: -1;
+}
+.hero_title, .hero_title_p {  
+    position: relative;
+    top: 65px; 
+}
+.hero_title_p {
+    font-size: 14px;
+    color: #fff;
+}
+.hero_content::before {
+    content: 'nodmotors';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 250px;
+    opacity: 0.3;
+}
+.hero_list {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.hero_li_p1 {
+    font-size: 12px;
+    color: #6AB04C;
+}
+.hero_arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+    bottom: 65px;
+}
+.hero_arrow::after {
+    content: '>';
+    background: #181818;
+    border-radius: 30px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero_arrow::before {
+    content: '<';
+    background: #A1CE54;
+    border-radius: 30px;
+    margin-right: 12px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.down{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%; 
+}
+.down::before {
+    content: url(../media/img/scroll_down.png);
+}
+.menu {
+    margin-top: 50px;
+    display:flex;
+    flex-direction:column;
+}
+.menu h1 {
+    font-size: 30px;
+}
+.menu_h1_p {
+    margin-bottom: 27px;
+    font-size: 10px;
+    color: lightgray;
+}
+select {
+    font-size: 14px;
+    font-family: panton;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px rgb(221, 221, 221);
+    padding: 10px;
+    height: 40px;
+    outline: none;
+    transition: 0.3s ease;
+}
+.select_green {
+    background-image: linear-gradient(#6AB04C,#BADC58);
+    color: #fff;
+    background-color: #A1CE54;
+}
+select:hover {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transition: 0.3s ease;
+}
+.select_car {
+    margin-bottom: 99px;
+}
+.cars {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center; 
+}
+.colors {
+    display:flex; 
+    justify-content: center;
+    margin-bottom: 11px;
+}
+.green, .black, .red, .white, .gray, .yellow, .blue, .orange, .pink{
+    width: 12px;
+    height: 12px;
+    border-radius: 20px;
+    margin: 0 4px; 
+}
+.red {
+    background: darkred;
+}
+.black {
+    background: black;
+}
+.green {
+    background: green;
+}
+.orange {
+    background: orange;
+}
+.pink {
+    background: pink;
+}
+.blue {
+    background: blue;
+}
+.gray {
+    background: gray;
+}
+.yellow {
+    background: yellow;
+}
+.white {
+    border: 1px solid;
+    box-sizing: border-box;
+}
+.tesla  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tesla img {
+    height: 196px;
+    max-width: 348px;
+}
+.bmw {
+    display: flex;
+    flex-direction: column;
+}
+.bmw img {
+    height: 144px;
+    max-width: 256px;
+    margin-bottom: 30px;
+}
+.from_price, .price {
+    font-size: 12px;
+    padding: 3px;
+    position: relative;
+    left: 50px;
+}
+.from_price {
+    color: rgb(177, 177, 177);
+}
+.price {
+    color: green;
+}
+.cars h2 {
+    font-size: 20px;
+}
+.cars_hp, .cars_km {
+    font-size: 10px;
+    color: gray;
+    padding: 10px;
+}
+footer p {
+    color: rgb(177, 177, 177);
+    font-size: 12px;
+}
+.contact a {
+    color: rgb(177, 177, 177);
+    font-size: 12px;
+    padding: 5px;
+}
+.back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(#6AB04C,#BADC58);
+    cursor: pointer;
+    outline: none;
+    border: none; 
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+  .back-to-top-btn:hover {
+    width: 53px;
+    height: 53px;
+  }
+  .icon-arrow-up img {
+    width: 30px;
+    height: 30px;
+  }
+
+/* --------- PAGE 2 ----------- */
+
+.hero_colors {
+    display: flex;
+    justify-content: center;
+}
+.hero_black, .hero_white, .hero_red {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    margin: 0 4px;
+}
+.hero_white {
+    border: 1px solid;
+    box-sizing: border-box;
+}
+.hero_black {
+    background: black;
+}
+.hero_red {
+    background: darkred;
+}
+.hero2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+.page_2_hero_title_p {
+    color: lightgray;
+}
+.page2_aside1 h1, .page2_article1 h1, .page2_article2 h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.page2_aside1_p {
+    margin-bottom: 75px;
+    font-size: 14px;
+    color: grey;
+}
+.page2_aside1_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 427px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+.page2_aside1_div::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #181818;
+    position: absolute;
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 10px;
+}
+.page2_aside_1_tesla {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 427px;
+}
+.page2_aside1_p2 {
+    position: relative;
+    bottom: 20px;
+}
+.page2_article1 p {
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: grey; 
+}
+.page2_article2 p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: gray;
+}
+.page2_stars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    background: #E8F0F3;
+    border-radius: 10px;
+}
+.page2_stars li {
+    display: flex;
+    justify-content: space-between; 
+    width: 320px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.stars_green_p {
+    font-size: 12px;
+    color: green;
+}
+.page2_stars img {
+    width: 135px;
+    height: 18px;
+}
+.page2_aside_two h1 {
+    margin-bottom: 20px;
+    margin-top: 36px;
+    font-size: 30px;
+}
+.page2_aside_two p{
+    font-size: 14px;
+    color: gray;
+}
+.arrow1 {
+    margin: 60px 12px 20px 0;
+    display:flex;
+}
+.arrow2 {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    top: 80px; 
+}
+.arrow1::before, .arrow2::before, .arrow3::before {
+    content: '<';
+    background: #A1CE54;
+    border-radius: 30px;
+    margin-right: 12px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow1::after, .arrow2::after, .arrow3::after  {
+    content: '>';
+    background: #181818;
+    border-radius: 30px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow3 {
+    display: flex;
+    margin-top: 57px;
+}
+.arrow3::after {
+    background: #A1CE54;
+}
+figure {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+figure img {
+    width: 256px;
+    height: 180px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.figure_5 {
+    opacity: 0.3;
+}
+.page2_menu_h1_p {
+    margin-bottom: 56px;
+    font-size: 10px;
+    color: lightgray;
+}
+
+/* --------- PAGE 3 ----------- */
+
+.page3_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page3_article h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.page3_box {
+    height: 349px;
+    width: 70%;
+    overflow-y: scroll;
+    font-size: 14px;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(#6AB04C,#BADC58);
+    border-radius: 10px;
+  }
+
+  /* --------- PAGE 4 ----------- */
+
+.page4_aside1_body {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+.page4_aside1_body h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.page4_contact_box {
+    height: 138px;
+    background: #FFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page4_contact img {
+    height: 20px;
+    width: 20px;
+    margin-right: 50px;
+}
+.page4_contact {
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.page4_contact a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+.page4_form input, .page4_form textarea {
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background: #FFF;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.page4_send {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#6AB04C,#BADC58);
+    color: #FFF;
+}
+.page4_send:hover {
+    color: #FFF;
+    font-size: 15px;
+}
+
+/* --------- RESPONSIVE ----------- */
+
+@media only screen and (min-width: 0px) {
+    body {
+        width: calc(100% - 30px);
+    }
+    nav.open {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    nav.open .header_ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    nav.open .header_ul li {
+        line-height: 60px;
+    }
+    .burger {
+        display: flex;
+        cursor: pointer;
+        position:relative;
+        z-index: 3;
+    }
+    .hero_content {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .hero_title {
+        font-size: 20px;
+    }
+    .hero_title, .hero_title_p {
+        text-align: center;
+        top: 10px;
+    }
+    .main_pic {
+        height: 200px; 
+        width: 100%;
+        object-fit: cover; 
+    }
+    .main_pic_box {
+        height: 280px;
+    }
+    .hero_list {
+        font-size: 16px;
+    }
+    .tesla  {
+        margin-bottom: 96px;
+        width: 100%;
+    }
+    .bmw {
+        width: 100%;
+        margin-bottom: 96px;
+    }
+    .select_car {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu_select {
+        display: flex;
+        flex-direction: column;
+    }
+    select {
+        margin-bottom: 10px;
+        width: 188px;
+        margin-right: 0px;
+    }
+    .select_green {
+        width: 188px;
+    }
+    .menu {
+        text-align: center;
+    }
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        text-align: center;
+        height: 150px;
+        margin-top: 20px;
+    }
+    .header_navigation, .tesla_hide, .tesla_hide1, .arrow2, .hero_arrow   {
+        display: none;
+    }
+    .page2_section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 56px;
+        margin-bottom: 36px;
+    }
+    .page2_aside1, .page2_article1, .page2_article2, .page2_aside_two {
+        text-align: center;
+        width: 100%;
+    }
+    .page_2_section_two {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .page2_aside_two {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .page2_aside_two img {
+        order: 3;
+        margin-top: 20px;
+    }
+    .page2_stars li {
+        width: 250px;
+    }
+    .page2_article1 {
+        width: 100%;
+        margin-left: 0px; 
+        margin-top: 56px;
+    }
+    .page2_article1 img {
+        height: 427px;
+        width: 100%;
+    }
+    .page2_aside1_p, .page2_article1 p {
+        margin-bottom: 20px;
+    }
+    .page4_section1 {
+        height: 100%; 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .page4_map {
+        height: 400px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-sizing: border-box;
+        margin-left: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .page4_aside1 {
+        height: 90vh;
+        width: 100%;
+        position: relative;
+        background: #E8F0F3;
+        border-radius: 10px;
+    }
+    .page4_contact_box {
+        width: 100%; 
+    }
+}
+@media only screen and (min-width: 500px) {
+    .main_pic {
+        height: 300px; 
+        width: 100%;
+        object-fit: cover; 
+    }
+    .main_pic_box {
+        height: 380px;
+    }
+}
+@media only screen and (min-width: 680px) {
+    .hero_list {
+        font-size: 22px;
+    }
+    .main_pic {
+        height: 350px; 
+        width: 100%;
+        object-fit: cover; 
+    }
+    .main_pic_box {
+        height: 400px;
+    }
+    .tesla  {
+        margin-bottom: 96px;
+        width: calc(100% / 2);
+    }
+    .bmw {
+        width: calc((100% / 2) - 20px);
+        margin-bottom: 96px;
+    }
+    .select_car {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu_select {
+        display: flex;
+        flex-direction: row;
+    }
+    select {
+        margin-bottom: 0px;
+        width: 164px;
+        margin-right: 20px;
+    }
+    .select_green {
+        width: 72px;
+    }
+    .menu {
+        text-align: left;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 100px;
+        margin-top: 0px;
+    }
+    .hero_title {
+        font-size: 25px;
+    }
+    .hero_title, .hero_title_p {
+        text-align: left;
+        top: 65px;
+    }
+    .hero_content {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+    }
+    .burger, .arrow3 {
+        display: none;
+    }
+    .header_navigation, .tesla_hide, .arrow2 {
+        display: flex;
+    }
+    .gold_bmw_price {
+        margin-bottom: 30px;
+        margin-top: 25px;
+    }
+    .page2_aside_two img {
+        width: 350px;
+        height: 376px;
+    }
+    .page2_section1 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 56px;
+        margin-bottom: 36px;
+    }
+    .page_2_section_two {
+        display: flex;
+        flex-direction: row;
+    }
+    .page2_aside1, .page2_article1, .page2_article2, .page2_aside_two {
+        text-align: left;
+    }
+    .page2_aside_two {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px; 
+    }
+    .page2_stars li {
+        width: 280px;
+    }
+    .page2_article1 {
+        width: 58%;
+        margin-left: 20px; 
+        margin-top: 0px;
+    }
+    .page2_aside_two img {
+        order: 0;
+        margin-top: 20px;
+    }
+    .page2_article1 p {
+        margin-bottom: 40px;
+    }
+    .page2_article1 img {
+        height: 427px;
+        width: 56vw;
+    }
+    .page2_aside1_p {
+        margin-bottom: 75px;
+    }
+    .page4_section1 {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .page4_map {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-sizing: border-box;
+        margin-left: 50px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .page4_aside1 {
+        height: 100%;
+        width: 30%;
+        position: relative;
+        background: #E8F0F3;
+        border-radius: 10px;
+    }
+    .page4_contact_box {
+        width: 35vw; 
+    }
+}
+@media only screen and (min-width: 880px) {
+    .hero_list {
+        font-size: 30px;
+    }
+    .main_pic_box {
+        height: 380px;
+    }
+    .hero_arrow {
+        bottom: 42px;
+        display: flex;
+    }
+    .tesla  {
+        margin-bottom: 96px;
+        width: calc(100% / 3);
+    }
+    .bmw {
+        width: calc((100% / 3) - 20px);
+        margin-bottom: 96px;
+    }
+    .hero_title {
+        font-size: 30px;
+    }
+    .tesla_hide1 {
+        display: flex;
+    }
+    .gold_bmw_price {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .page2_aside_two img {
+        width: 440px;
+        height: 376px;
+    }
+    
+}
