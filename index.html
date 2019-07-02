@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="assets/media/img/logo.png" alt="Nod Motors logo" title="Nod Motors logo"></a>
+        <a href="index.html"><img class="logo" src="assets/media/img/logo.png" alt="Nod Motors logo" title="Nod Motors logo"></a>
         <nav id="menu" class="header_navigation">
             <ul id="header_ul" class="header_ul">
                 <li><a href="index.html">Cars</a></li>
@@ -26,6 +26,7 @@
     </header>
     <div id="contact_form" class="contact_form ">
         <form action="#!" method="post" class="message_info">
+            <span onclick="contactHide()" id="hide" title="close">&times;</span>
             <h1>Booking Form</h1>
             <p>Includes Michelin Pilot Sport 4S tires</p>
             <input type="text" name="firstname" placeholder="Name">
@@ -47,7 +48,10 @@
         <section class="hero_content">
             <h1 class="hero_title">Tesla Model 3</h1>
             <p class="hero_title_p">Luxury Fast</p>
-            <div class="main_pic_box"><a href="page2.html"><img class="main_pic" src="media/image/mainpic.png" alt="Tesla" title="Main pic tesla"></a></div> 
+            <div class="main_pic_box"><a href="page2.html">
+                <img class="main_pic" src="media/image/mainpic.png" alt="Tesla" title="Main pic tesla">
+                <img class="main_pic" src="media/image/tesla model 3 gray.png" alt="Tesla" title="Main pic tesla">
+            </a></div>
             <ul class="hero_list">
                 <li>
                     <p class="hero_li_p1">power:</p>
@@ -63,7 +67,7 @@
                 </li>
             </ul>
         </section>
-        <a class="down" href="#"><span class="hero_arrow"></span></a>
+        <a class="down" href="#"><span onclick="vcadot(1)" class="hero_arrow"></span></a>
     </div>
     <section class="menu">
         <h1>Available Cars</h1>

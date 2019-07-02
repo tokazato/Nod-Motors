@@ -22,11 +22,22 @@
     opacity: 1;
 }
 }
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
 body {
     max-width: 1084px;
@@ -114,7 +125,7 @@ a:hover {
     opacity: 0.95;
     left: 0;
     top: 0;
-    z-index: 7;
+    z-index: 7777;
 }
 .contact_form.opencontact {
     display: block;
@@ -125,7 +136,14 @@ a:hover {
     opacity: 0.95;
     left: 0;
     top: 0;
-    z-index: 7;
+    z-index: 7777;
+}
+#hide {
+    position: relative;
+    bottom: 30px;
+    left: 100px;
+    font-size: 50px;
+    cursor: pointer;
 }
 .message_info {
     display: flex;
@@ -200,6 +218,9 @@ a:hover {
 .modal-content h1, .modal-content p {
     text-align: center;
     width: 174px;
+}
+.main_pic {
+    display: none;
 }
 .hero {
     display: flex;
@@ -462,12 +483,15 @@ footer p {
 .hero_white {
     border: 1px solid;
     box-sizing: border-box;
+    cursor: pointer;
 }
 .hero_black {
     background: black;
+    cursor: pointer;
 }
 .hero_red {
     background: darkred;
+    cursor: pointer;
 }
 .hero2 {
     display: flex;
@@ -727,8 +751,6 @@ figure img {
         background: #fff;
         position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
         z-index: 1;
     }
     nav.open .header_ul {
@@ -764,8 +786,9 @@ figure img {
         height: 60vmin; 
         width: 100vmin;
         object-fit: cover; 
+        animation: fade 1.5s forwards;
     }
-    .main_pic_box {
+    .main_pic_box img {
         height: 60vmin;
     }
     .hero_list {
@@ -1030,7 +1053,7 @@ figure img {
 }
 @media only screen and (min-width: 880px) {
     .hero_arrow {
-        bottom: 42px;
+        bottom: 60px;
         display: flex;
     }
     .tesla  {
@@ -1102,8 +1125,3 @@ figure img {
     }
    
 }
-
-
-
-
-

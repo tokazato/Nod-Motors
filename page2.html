@@ -26,6 +26,7 @@
     </header>
     <div id="contact_form" class="contact_form ">
         <form action="#!" method="post" class="message_info">
+            <span onclick="contactHide()" id="hide" title="close">&times;</span>
             <h1>Booking Form</h1>
             <p>Includes Michelin Pilot Sport 4S tires</p>
             <input type="text" name="firstname" placeholder="Name">
@@ -48,10 +49,13 @@
             <h1 class="hero_title">Tesla Model 3</h1>
             <p class="hero_title_p page_2_hero_title_p">Luxury Fast</p>
             <div class="main_pic_box">
-                <a href="page2.html"><img class="main_pic" src="media/image/mainpic.png" alt="Tesla" title="Tesla"></a>
+                <a href="page2.html">
+                    <img id="whiteCar" class="main_pic " src="media/image/mainpic.png" alt="Tesla" title="Tesla">
+                    <img id="grayCar" class="main_pic " src="media/image/tesla model 3 gray.png" alt="Tesla" title="Main pic tesla">
+                </a>
                 <div class='hero_colors'>
-                    <span class="hero_white"></span>
-                    <span class="hero_black"></span>
+                    <span onclick="feri()"   class="hero_white"></span>
+                    <span onclick="cg()"    class="hero_black"></span>
                     <span class="hero_red"></span>
                 </div>
             </div>

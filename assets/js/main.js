@@ -38,19 +38,19 @@ document.addEventListener("DOMContentLoaded", function() {
   bookbtn.addEventListener("click", bookClick);
 
   function bookClick() {
-    contact.classList.toggle("opencontact");
+    contact.style.display = 'flex';
   }
 
   // ------------- X on-Book ------------
 
-  bookbtn.addEventListener("click", function(){
-    this.classList.toggle("added");
-    if(this.classList.contains("added")){
-      this.textContent = "X";
-    } else {
-      this.textContent = "Book"
-    }
-  })
+  // bookbtn.addEventListener("click", function(){
+  //   this.classList.toggle("added");
+  //   if(this.classList.contains("added")){
+  //     this.textContent = "X";
+  //   } else {
+  //     this.textContent = "Book"
+  //   }
+  // })
 
 
   // ------------- Thank form after book ------------
@@ -74,6 +74,11 @@ function burgerClick() {
   navbarMenu.classList.toggle("open");
 }
 
+
+// ------------- Close  Contact Form -----------
+function contactHide()  {
+  contact.style.display = "none" ;
+}
 
 // ------------- X on-burger ------------
 
@@ -140,4 +145,41 @@ function easeInOutCubic(t, b, c, d) {
   t -= 2;
   return c/2*(t*t*t + 2) + b;
 };
+
+
+
+
+//  --------------------   Slider  Change main pic  -------------
+var slideIndex = 1;           
+test(slideIndex);
+
+function vcadot(f){
+  test(slideIndex += f);
+}
+
+function test(f){
+  var slides = document.getElementsByClassName('main_pic');
+  if (f > slides.length){ slideIndex = 1 }
+  if (f < 1) {slideIndex = slides.length}
+
+  for(let i = 0; i < slides.length; i++){
+    slides[i].style.display = 'none';
+  }
+slides[slideIndex - 1].style.display = 'block';
+
+
+}
+
+
+var color = document.getElementById('whiteCar');
+var colgray =  document.getElementById('grayCar');
+
+function cg(){
+  colgray.style.display = 'block';
+  color.style.display = 'none';
+}
+function feri(){
+  color.style.display = 'block';
+  colgray.style.display = 'none';
+}
 
