@@ -151,35 +151,96 @@ function easeInOutCubic(t, b, c, d) {
 
 //  --------------------   Slider  Change main pic  -------------
 var slideIndex = 1;           
-test(slideIndex);
+change(slideIndex);
 
-function vcadot(f){
-  test(slideIndex += f);
+function carChange(f){
+  change(slideIndex += f);
 }
 
-function test(f){
+function change(f){
   var slides = document.getElementsByClassName('main_pic');
+
   if (f > slides.length){ slideIndex = 1 }
   if (f < 1) {slideIndex = slides.length}
 
   for(let i = 0; i < slides.length; i++){
     slides[i].style.display = 'none';
   }
-slides[slideIndex - 1].style.display = 'block';
 
-
+  slides[slideIndex - 1].style.display = 'block';
 }
 
 
-var color = document.getElementById('whiteCar');
-var colgray =  document.getElementById('grayCar');
 
-function cg(){
-  colgray.style.display = 'block';
-  color.style.display = 'none';
+// --------------- page 2 main pic change color  -----------
+var White = document.getElementById('whiteCar');
+var Gray =  document.getElementById('grayCar');
+
+function addGray(){
+  Gray.style.display = 'block';
+  White.style.display = 'none';
 }
-function feri(){
-  color.style.display = 'block';
-  colgray.style.display = 'none';
+function addWhite(){
+  White.style.display = 'block';
+  Gray.style.display = 'none';
 }
 
+
+
+
+// --------- show next section of car --------- 
+let bmwHide1 = document.getElementById('bmwHide1');
+let bmwHide2 = document.getElementById('bmwHide2')
+let bmwHide3 = document.getElementById('bmwHide3')
+
+let teslaHide1 = document.getElementById('teslaHide1');
+let teslaHide2 = document.getElementById('teslaHide2')
+let teslaHide3 = document.getElementById('teslaHide3')
+
+function appearBMW(){
+  bmwHide1.style.display = 'flex';
+  bmwHide2.style.display = 'flex';
+  bmwHide3.style.display = 'flex';
+  
+  teslaHide1.style.display = 'none';
+  teslaHide2.style.display = 'none';
+  teslaHide3.style.display = 'none';
+}
+
+function appearTesla(){
+  bmwHide1.style.display = 'none';
+  bmwHide2.style.display = 'none';
+  bmwHide3.style.display = 'none';
+  
+  teslaHide1.style.display = 'flex';
+  teslaHide2.style.display = 'flex';
+  teslaHide3.style.display = 'flex';
+}
+
+
+
+
+
+
+
+
+
+var slideIndex = 1;           
+slg(slideIndex);
+
+function xoo(f){
+  slg(slideIndex += f);
+}
+
+function slg(f){
+  var popo = document.getElementsByClassName('sliderCar');
+
+  if (f > popo.length){ slideIndex = 1 }
+  if (f < 1) {slideIndex = popo.length}
+
+  for(let i = 0; i < popo.length; i++){
+    popo[i].style.display = 'none';
+  }
+
+  popo[slideIndex - 1].style.display = 'block';
+}

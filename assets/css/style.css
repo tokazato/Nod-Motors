@@ -23,15 +23,14 @@
 }
 }
 @-webkit-keyframes fade {
-    from {opacity: .4} 
+    from { opacity: .4} 
     to {opacity: 1}
   }
   
-  @keyframes fade {
+@keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
-  }
-
+}
 * {
     margin: 0;
     padding: 0;
@@ -120,7 +119,7 @@ a:hover {
     display: none;
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background: #FFF;
     opacity: 0.95;
     left: 0;
@@ -131,7 +130,7 @@ a:hover {
     display: block;
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background: #FFF;
     opacity: 0.95;
     left: 0;
@@ -220,6 +219,12 @@ a:hover {
     width: 174px;
 }
 .main_pic {
+    height: 58vmin; 
+    width: 100%;
+    object-fit: cover; 
+    animation: fade 1.5s forwards;
+}
+.main_pic {
     display: none;
 }
 .hero {
@@ -242,7 +247,7 @@ a:hover {
     top: 65px; 
 }
 .hero_title_p {
-    font-size: 14px;
+    font-size: 3vmin;
     color: #fff;
 }
 .hero_content::before {
@@ -324,6 +329,18 @@ a:hover {
     font-size: 10px;
     color: lightgray;
 }
+webkit-select {
+    font-size: 14px;
+    font-family: panton;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px rgb(221, 221, 221);
+    padding: 10px;
+    height: 40px;
+    outline: none;
+    transition: 0.3s ease;
+}
 select {
     font-size: 14px;
     font-family: panton;
@@ -400,6 +417,8 @@ select:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: fade 1.5s forwards;
+
 }
 .tesla img {
     height: 196px;
@@ -408,6 +427,8 @@ select:hover {
 .bmw {
     display: flex;
     flex-direction: column;
+    animation: fade 1.5s forwards;
+
 }
 .bmw img {
     height: 144px;
@@ -584,6 +605,10 @@ footer p {
     font-size: 14px;
     color: gray;
 }
+.sliderCar {
+    display: none;
+}
+
 .arrow1 {
     margin: 60px 12px 20px 0;
     display:flex;
@@ -595,7 +620,7 @@ footer p {
     position: relative;
     top: 80px; 
 }
-.arrow1::before, .arrow2::before, .arrow3::before {
+.arrow1::before, .prev {
     content: '<';
     background: #A1CE54;
     border-radius: 30px;
@@ -607,8 +632,9 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-.arrow1::after, .arrow2::after, .arrow3::after  {
+.arrow1::after, .next  {
     content: '>';
     background: #181818;
     border-radius: 30px;
@@ -619,10 +645,10 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .arrow3 {
     display: flex;
-    margin-top: 57px;
 }
 .arrow3::after {
     background: #A1CE54;
@@ -630,7 +656,6 @@ footer p {
 figure {
     display: flex;
     flex-wrap: nowrap;
-    width: 100% !important;
 }
 figure img {
     width: 256px;
@@ -645,6 +670,9 @@ figure img {
     margin-bottom: 56px;
     font-size: 10px;
     color: lightgray;
+}
+#bmwHide1, #bmwHide2, #bmwHide3 {
+    display: none;
 }
 
 /* --------- PAGE 3 ----------- */
@@ -776,31 +804,22 @@ figure img {
         height: 100%;
     }
     .hero_title {
-        font-size: 20px;
+        font-size: 5vmin;
     }
     .hero_title, .hero_title_p {
         text-align: center;
         top: 10px;
     }
-    .main_pic {
-        height: 60vmin; 
-        width: 100vmin;
-        object-fit: cover; 
-        animation: fade 1.5s forwards;
-    }
-    .main_pic_box img {
-        height: 60vmin;
-    }
     .hero_list {
         font-size: 5vmin;
     }
     .tesla  {
-        margin-bottom: 96px;
+        margin-bottom: 36px;
         width: 100%;
     }
     .bmw {
         width: 100%;
-        margin-bottom: 96px;
+        margin-bottom: 58px;
     }
     .select_car {
         display: flex;
@@ -831,10 +850,7 @@ figure img {
         height: 150px;
         margin-top: 20px;
     }
-    .header_navigation, .hero_content::before, .tesla_hide, .tesla_hide1, .arrow2, .hero_arrow   {
-        display: none;
-    }
-    .hero_colors {
+    .header_navigation, .hero_content::before, .tesla_hide, .tesla_hide1, .arrow2, .hero_arrow, .hero_colors   {
         display: none;
     }
     .page2_section1 {
@@ -953,12 +969,9 @@ figure img {
         height: 100px;
         margin-top: 0px;
     }
-    .hero_title {
-        font-size: 25px;
-    }
     .hero_title, .hero_title_p {
         text-align: left;
-        top: 65px;
+        top: 45px;
     }
     .hero_content {
         display:flex;
@@ -1053,7 +1066,7 @@ figure img {
 }
 @media only screen and (min-width: 880px) {
     .hero_arrow {
-        bottom: 60px;
+        bottom: 50px;
         display: flex;
     }
     .tesla  {
@@ -1063,9 +1076,6 @@ figure img {
     .bmw {
         width: calc((100% / 3) - 20px);
         margin-bottom: 96px;
-    }
-    .hero_title {
-        font-size: 5vmin;
     }
     .tesla_hide1 {
         display: flex;
@@ -1085,6 +1095,7 @@ figure img {
         display: flex;
     }
     
+    
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1099,29 +1110,27 @@ figure img {
 
 @media only screen and (min-height: 0px) {
     .main_pic {
-        height: 42vmin; 
-        width: 150vmin;
-        object-fit: cover; 
+        height: 45vmin; 
+        width: 115vmin;
     }
-    .main_pic_box {
-        height: 42vmin;
-    }
-    .down  {
-        display: none;
+    .down, .hero_colors  {
+        visibility: hidden;
     }
     
+    
 }
-@media only screen and (min-height: 500px) {
-    .main_pic {
-        height: 57vmin; 
+@media only screen and (min-height: 430px) {
+     .main_pic {
+        height: 58vmin; 
         width: 100%;
-        object-fit: cover; 
     }
-    .main_pic_box {
-        height: 57vmin;
-    }
-    .down {
-        display: flex;
+}
+
+@media only screen and (min-height: 550px) {
+    .down, .hero_colors {
+        visibility: visible;
     }
    
 }
+
+

@@ -54,8 +54,8 @@
                     <img id="grayCar" class="main_pic " src="media/image/tesla model 3 gray.png" alt="Tesla" title="Main pic tesla">
                 </a>
                 <div class='hero_colors'>
-                    <span onclick="feri()"   class="hero_white"></span>
-                    <span onclick="cg()"    class="hero_black"></span>
+                    <span onclick="addWhite()"   class="hero_white"></span>
+                    <span onclick="addGray()"    class="hero_black"></span>
                     <span class="hero_red"></span>
                 </div>
             </div>
@@ -132,7 +132,7 @@
             <p>model 3 is fully electic, so you never need to visit a gas station again. if you charge overnight at home, you can wake up ti a full battery every morning. and when you are in the roadm it's easy to plug in along the way-at any public station or with the tesla charging network. we currently have over 10,000 superchargers</p>
         </aside>
     </section>
-    <a href="#"><div class="arrow1"></div></a>  
+    <div  class="arrow1"></div> 
     <figure>
         <img class="lazy figure_1" src="media/image/cover.jpeg" data-src="assets/media/img/gallery_1.png" alt="tesla" title="Tesla">
         <img class="lazy figure_2" src="media/image/cover.jpeg" data-src="assets/media/img/gallery_2.png" alt="tesla" title="Tesla">
@@ -140,12 +140,12 @@
         <img class="lazy figure_4" src="media/image/cover.jpeg" data-src="assets/media/img/gallery_4.png" alt="tesla" title="Tesla">
         <img class="lazy figure_5" src="media/image/cover.jpeg" data-src="assets/media/img/gallery_5.jpg" alt="tesla" title="Tesla">
     </figure>
-    <a href="#"><div class="arrow2"></div></a> 
+    <div class="arrow2"> <span onclick="appearTesla()" class="prev"> &#8678;</span> <span onclick="appearBMW()" class="next">&#8680;</span></div>
     <section class="menu">
         <h1>Available Cars</h1>
         <p class="page2_menu_h1_p" >Please Use for optimal results</p>
         <ul class="cars">
-                <li class="tesla">
+                <li id="teslaHide1" class="tesla sliderCar">
                     <div>    
                         <span class="from_price">from:</span><span class="price">59 000 $</span>
                     </div>
@@ -160,9 +160,10 @@
                        <span class="cars_hp">302 hp</span>
                        <span class="cars_km">200 km/hp</span>
                     </div>
-                    <a href="#"><div class="arrow3"></div></a>
                 </li>
-                <li class="tesla tesla_hide">
+
+                <!-- iwyeba  -->
+                <li class="tesla tesla_hide sliderCar">
                     <div>
                         <span class="from_price">from:</span><span class="price">79 000 $</span>
                     </div>
@@ -177,7 +178,7 @@
                         <span class="cars_km">252 km/hp</span>
                     </div>
                 </li>
-                <li class="tesla tesla_hide1">
+                <li class="tesla tesla_hide1 sliderCar">
                     <div>
                         <span class="from_price">from:</span><span class="price">103 000 $</span>
                     </div>
@@ -194,6 +195,149 @@
                         <span class="cars_km">302 km/hp</span>
                     </div>
                 </li>
+                <li class="bmw sliderCar">
+                    <div>  
+                        <span class="from_price">from:</span><span class="price">61 000 $</span>
+                    </div>  
+                    <a href="page2.html"><img class="lazy gold_bmw_price" src="media/image/cover.jpeg" data-src="media/image/4.png" alt="BMW" title="BMW X2"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                        <span class="yellow"></span>
+                        <span class="gray"></span>
+                    </div>
+                        <h2>The first ever BMW X2</h2>
+                        <div>
+                        <span class="cars_hp">302 hp</span>
+                        <span class="cars_km">200 km/hp</span>
+                    </div>
+                </li>
+                <li class="bmw sliderCar ">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">92 000 $</span>
+                    </div>
+                    <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/5.png" alt="BMW" title="BMW M6"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                        <span class="blue"></span>
+                        <span class="gray"></span>
+                        <span class="pink"></span>
+                    </div>
+                    <h2>BMW M6 Gran Coupe</h2>
+                    <div>
+                        <span class="cars_hp">343 hp</span>
+                        <span class="cars_km">252 km/hp</span>
+                    </div>
+                </li>
+                <li class="bmw sliderCar">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">132 000 $</span>
+                    </div>
+                    <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/6.png" alt="BMW" title="BMW X7"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                        <span class="gray"></span>
+                        <span class="blue"></span>
+                    </div>
+                    <h2>BMW X7</h2>
+                    <div>
+                        <span class="cars_hp">380 hp</span>
+                        <span class="cars_km">302 km/hp</span>
+                    </div>
+                </li>
+                <div class="arrow3"><span onclick="xoo(-1)" class="prev"> &#8678;</span> <span onclick="xoo(1)" class="next">&#8680;</span></div>
+                <!-- mtavrdeba  -->
+
+
+
+                <li id="teslaHide2" class="tesla tesla_hide ">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">79 000 $</span>
+                    </div>
+                        <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/2.png" alt="Tesla" title="Tesla 3S"></a>
+                        <div class="colors">
+                            <span class="white"></span>
+                            <span class="black"></span>
+                    </div>
+                        <h2>Tesla Model 3S</h2>
+                    <div>
+                        <span class="cars_hp">343 hp</span>
+                        <span class="cars_km">252 km/hp</span>
+                    </div>
+                </li>
+                <li id="teslaHide3" class="tesla tesla_hide1 ">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">103 000 $</span>
+                    </div>
+                        <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/3.png" alt="Tesla" title="Tesla 3Z"></a>
+                        <div class="colors">
+                            <span class="white"></span>
+                            <span class="orange"></span>
+                            <span class="gray"></span>
+                            <span class="green"></span>
+                        </div>
+                        <h2>Tesla Model 3Z</h2>
+                    <div>
+                        <span class="cars_hp">380 hp</span>
+                        <span class="cars_km">302 km/hp</span>
+                    </div>
+                </li>
+                <li id="bmwHide1" class="bmw ">
+                    <div>  
+                        <span class="from_price">from:</span><span class="price">61 000 $</span>
+                    </div>  
+                    <a href="page2.html"><img class="lazy gold_bmw_price" src="media/image/cover.jpeg" data-src="media/image/4.png" alt="BMW" title="BMW X2"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                        <span class="yellow"></span>
+                        <span class="gray"></span>
+                    </div>
+                        <h2>The first ever BMW X2</h2>
+                        <div>
+                        <span class="cars_hp">302 hp</span>
+                        <span class="cars_km">200 km/hp</span>
+                    </div>
+                </li>
+                <li id="bmwHide2" class="bmw  ">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">92 000 $</span>
+                    </div>
+                    <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/5.png" alt="BMW" title="BMW M6"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                        <span class="blue"></span>
+                        <span class="gray"></span>
+                        <span class="pink"></span>
+                    </div>
+                    <h2>BMW M6 Gran Coupe</h2>
+                    <div>
+                        <span class="cars_hp">343 hp</span>
+                        <span class="cars_km">252 km/hp</span>
+                    </div>
+                </li>
+                <li id="bmwHide3" class="bmw ">
+                    <div>
+                        <span class="from_price">from:</span><span class="price">132 000 $</span>
+                    </div>
+                    <a href="page2.html"><img class="lazy" src="media/image/cover.jpeg" data-src="media/image/6.png" alt="BMW" title="BMW X7"></a>
+                    <div class="colors">
+                        <span class="white"></span>
+                        <span class="black"></span>
+                        <span class="gray"></span>
+                        <span class="blue"></span>
+                    </div>
+                    <h2>BMW X7</h2>
+                    <div>
+                        <span class="cars_hp">380 hp</span>
+                        <span class="cars_km">302 km/hp</span>
+                    </div>
+                </li>
+
+            </ul>
     </section>
     <footer>
             <a href="#"><img src="assets/media/img/sa_logo.png" alt="Smart logo" title="Smart Logo"></a>
