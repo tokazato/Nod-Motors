@@ -335,6 +335,7 @@ a:hover {
     color: lightgray;
 }
 select {
+    text-align-last:center;
     font-size: 14px;
     font-family: panton;
     font-weight: bold;
