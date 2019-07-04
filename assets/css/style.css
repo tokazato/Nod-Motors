@@ -605,9 +605,7 @@ footer p {
     font-size: 14px;
     color: gray;
 }
-.sliderCar {
-    display: none;
-}
+
 
 .arrow1 {
     margin: 60px 12px 20px 0;
@@ -671,9 +669,7 @@ figure img {
     font-size: 10px;
     color: lightgray;
 }
-#bmwHide1, #bmwHide2, #bmwHide3 {
-    display: none;
-}
+
 
 /* --------- PAGE 3 ----------- */
 
@@ -850,7 +846,7 @@ figure img {
         height: 150px;
         margin-top: 20px;
     }
-    .header_navigation, .hero_content::before, .tesla_hide, .tesla_hide1, .arrow2, .hero_arrow, .hero_colors   {
+    .header_navigation, .hero_content::before, .arrow2, .hero_arrow, .hero_colors   {
         display: none;
     }
     .page2_section1 {
@@ -895,6 +891,10 @@ figure img {
     .page2_aside1_p, .page2_article1 p {
         margin-bottom: 20px;
     }
+    #teslaHide1, #teslaHide2, #teslaHide3, #bmwHide1, #bmwHide2, #bmwHide3 {
+        display: none;
+     }
+   
     .figure_2, .figure_3, .figure_4, .figure_5{
         display: none;
     }
@@ -982,7 +982,7 @@ figure img {
     .burger, .arrow3 {
         display: none;
     }
-    .header_navigation, .tesla_hide, .arrow2 {
+    .header_navigation, .arrow2 {
         display: flex;
     }
     .gold_bmw_price {
@@ -1033,6 +1033,9 @@ figure img {
     .page2_aside1_p {
         margin-bottom: 75px;
     }
+    #teslaHide1, #teslaHide2, #teslaHide3 {
+        display: flex;
+     }
     .figure_3 {
         display: flex;
     }
@@ -1076,9 +1079,6 @@ figure img {
     .bmw {
         width: calc((100% / 3) - 20px);
         margin-bottom: 96px;
-    }
-    .tesla_hide1 {
-        display: flex;
     }
     .gold_bmw_price {
         margin-bottom: 0px;
@@ -1132,5 +1132,3 @@ figure img {
     }
    
 }
-
-

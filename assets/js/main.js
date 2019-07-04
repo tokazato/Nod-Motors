@@ -221,14 +221,11 @@ function appearTesla(){
 
 
 
-
-
-
-
-var slideIndex = 1;           
+// ------------------ slider change image mobile version ----------------
+// var slideIndex = 1;   // slideIndex aris gamodzaxebuli zevit 
 slg(slideIndex);
 
-function xoo(f){
+function changeImage(f){
   slg(slideIndex += f);
 }
 
@@ -242,5 +239,5 @@ function slg(f){
     popo[i].style.display = 'none';
   }
 
-  popo[slideIndex - 1].style.display = 'block';
+  popo[slideIndex - 1].style.display = 'flex';  
 }
