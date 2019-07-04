@@ -57,9 +57,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var modal = document.getElementById('myModal');
   var btn = document.getElementById("sendBtn");
+  var put = document.getElementsByTagName('input');
+  var sheavse = document.getElementsByClassName('write');
+  
   
   btn.onclick = function() {
-    modal.style.display = "block";
+
+    
+   
+      if ( put[0].value.length < 4 ) { sheavse[0].innerHTML = 'Please Write Down min. 4 letters' }
+      if(put[0].value.length > 4 ){ sheavse[0].innerHTML = '' }
+
+      if ( put[1].value.length < 4 ) { sheavse[1].innerHTML = 'Please Write Down min. 4 letters' }
+      if (put[1].value.length > 4){  sheavse[1].innerHTML = ''; }
+
+      if ( !/...@.../.test(put[2].value)  ) { sheavse[2].innerHTML = 'Please Write Down Your Email' }; 
+      if ( /...@.../.test(put[2].value ) ) { sheavse[2].innerHTML = '' }; 
+
+     
+     
+
+      if (put[0].value.length > 4 && put[1].value.length > 4 && /...@.../.test(put[2].value )) { modal.style.display = "block" }
+    
+      // var patt = /..@../;
+      // var xaxaxa = patt.test();
   }
 
 
@@ -75,9 +96,16 @@ function burgerClick() {
 }
 
 
-// ------------- Close  Contact Form -----------
+// ------------- Close  Contact Form and input field, input p innerHTML -----------
 function contactHide()  {
   contact.style.display = "none" ;
+  put[0].value = '';
+  put[1].value = '';
+  put[2].value = '';
+  sheavse[0].innerHTML = '';
+  sheavse[1].innerHTML = '';
+  sheavse[2].innerHTML = '';
+  document.getElementsByTagName('textarea')[0].value = '';
 }
 
 // ------------- X on-burger ------------
@@ -86,12 +114,16 @@ function myFunction(x) {
  x.classList.toggle("change");
 }
 
-// ------------- hide to thanks form by X   ------------
+// ------------- hide to thanks form by X and input field  ------------
 
 const hide = document.querySelector(".close");
 
 hide.onclick = function() {
   modal.style.display = "none" ;
+  contact.style.display = "none" ;
+  put[0].value = '';
+  put[1].value = '';
+  put[2].value = '';
 }
 
 

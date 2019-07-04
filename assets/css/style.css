@@ -149,7 +149,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 140px;
+    top: 50px;
     width: 100%;
     height: 100vh;
     z-index: 3;
@@ -159,7 +159,7 @@ a:hover {
     font-size: 30px;
     margin-bottom: 20px;
 }
-.message_info p {
+.message_info_title {
     font-size: 14px;
     color: #aaa;
     margin-bottom: 40px;
@@ -170,8 +170,13 @@ a:hover {
     padding-left: 5px;
     border-radius: 5px;
     background: #E8F0F3;
-    margin-bottom: 10px;
     outline: none;
+}
+.write {
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: left;
+    color: red;
 }
 .message_info textarea {
     height: 60px;
@@ -329,18 +334,6 @@ a:hover {
     font-size: 10px;
     color: lightgray;
 }
-webkit-select {
-    font-size: 14px;
-    font-family: panton;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 0px 0px 5px rgb(221, 221, 221);
-    padding: 10px;
-    height: 40px;
-    outline: none;
-    transition: 0.3s ease;
-}
 select {
     font-size: 14px;
     font-family: panton;
@@ -352,6 +345,7 @@ select {
     height: 40px;
     outline: none;
     transition: 0.3s ease;
+    -webkit-appearance:none;
 }
 .select_green {
     background-image: linear-gradient(#6AB04C,#BADC58);
