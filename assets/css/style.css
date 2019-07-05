@@ -172,10 +172,9 @@ a:hover {
     background: #E8F0F3;
     outline: none;
 }
-.write {
+.write, .wrong {
     margin-bottom: 10px;
     font-size: 12px;
-    text-align: left;
     color: red;
 }
 .message_info textarea {
@@ -335,7 +334,7 @@ a:hover {
     color: lightgray;
 }
 select {
-    text-align-last:center;
+    text-align-last: center;
     font-size: 14px;
     font-family: panton;
     font-weight: bold;
@@ -732,25 +731,24 @@ figure img {
     font-size: 12px;
 }
 .page4_form input, .page4_form textarea {
-    width: 90%;
+    width: 100%;
     border: none;
     border-radius: 5px;
     padding: 10px;
-    background: #FFF;
-    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
+    background: #fff;
 }
 .page4_send {
     width: 100%;
     height: 30px;
     border-radius: 5px;
     margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(#6AB04C,#BADC58);
     color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    border: none;
 }
 .page4_send:hover {
     color: #FFF;
@@ -1035,7 +1033,7 @@ figure img {
         display: flex;
     }
     .page4_section1 {
-        height: 500px;
+        height: 540px;
         width: 100%;
         display: flex;
         flex-direction: row;

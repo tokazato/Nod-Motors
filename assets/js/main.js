@@ -53,35 +53,54 @@ document.addEventListener("DOMContentLoaded", function() {
   // })
 
 
-  // ------------- Thank form after book ------------
+  // ------------- check every input value Thank form after book ------------
 
-  var modal = document.getElementById('myModal');
-  var btn = document.getElementById("sendBtn");
-  var put = document.getElementsByTagName('input');
-  var sheavse = document.getElementsByClassName('write');
+   var modal = document.getElementById('myModal');
+    var btn = document.getElementById("sendBtn");
+    var sendbtn2 = document.getElementById('btnSend2');
+    var put = document.getElementsByClassName("bookForm");
+    var writeDown = document.getElementsByClassName('write');
   
   
   btn.onclick = function() {
 
-    
-   
-      if ( put[0].value.length < 4 ) { sheavse[0].innerHTML = 'Please Write Down min. 4 letters' }
-      if(put[0].value.length > 4 ){ sheavse[0].innerHTML = '' }
+      if ( put[0].value.length < 4 ) { writeDown[0].innerHTML = 'Please Write Down min. 4 letters' }
+      if(put[0].value.length > 4 ){ writeDown[0].innerHTML = '' }
 
-      if ( put[1].value.length < 4 ) { sheavse[1].innerHTML = 'Please Write Down min. 4 letters' }
-      if (put[1].value.length > 4){  sheavse[1].innerHTML = ''; }
+      if ( put[1].value.length < 4 ) { writeDown[1].innerHTML = 'Please Write Down min. 4 letters' }
+      if (put[1].value.length > 4){  writeDown[1].innerHTML = '' };
 
-      if ( !/...@.../.test(put[2].value)  ) { sheavse[2].innerHTML = 'Please Write Down Your Email' }; 
-      if ( /...@.../.test(put[2].value ) ) { sheavse[2].innerHTML = '' }; 
-
-     
-     
+      if ( !/...@.../.test(put[2].value)  ) { writeDown[2].innerHTML = 'Please Write Down Your Email' }; 
+      if ( /...@.../.test(put[2].value ) ) { writeDown[2].innerHTML = '' }; 
 
       if (put[0].value.length > 4 && put[1].value.length > 4 && /...@.../.test(put[2].value )) { modal.style.display = "block" }
-    
-      // var patt = /..@../;
-      // var xaxaxa = patt.test();
   }
+
+
+  var wrongText = document.getElementsByClassName('wrong');
+  var contactPut = document.getElementsByClassName("putForm");
+  function cntcFunction() {
+
+    if (contactPut[0].value.length < 4){ wrongText[0].innerHTML = 'Please Write Down min. 4 letters'};
+    if (contactPut[0].value.length > 4 ){ wrongText[0].innerHTML = '' };
+  
+    if ( contactPut[1].value.length < 4 ) { wrongText[1].innerHTML = 'Please Write Down min. 4 letters' };
+    if ( contactPut[1].value.length > 4){  wrongText[1].innerHTML = '' };
+  
+    if ( !/...@.../.test(contactPut[2].value)  ) { wrongText[2].innerHTML = 'Please Write Down Your Email' }; 
+    if ( /...@.../.test(contactPut[2].value ) ) { wrongText[2].innerHTML = '' }; 
+  
+    if (contactPut[0].value.length > 4 && contactPut[1].value.length > 4 && /...@.../.test(contactPut[2].value )){ 
+      contact.style.display = "block" ;
+      modal.style.display = "block" 
+      
+    }
+  }
+ 
+
+
+
+
 
 
 // ------------- open nav by burger ------------
@@ -102,9 +121,9 @@ function contactHide()  {
   put[0].value = '';
   put[1].value = '';
   put[2].value = '';
-  sheavse[0].innerHTML = '';
-  sheavse[1].innerHTML = '';
-  sheavse[2].innerHTML = '';
+  writeDown[0].innerHTML = '';
+  writeDown[1].innerHTML = '';
+  writeDown[2].innerHTML = '';
   document.getElementsByTagName('textarea')[0].value = '';
 }
 
@@ -124,6 +143,9 @@ hide.onclick = function() {
   put[0].value = '';
   put[1].value = '';
   put[2].value = '';
+  contactPut[0].value = '';
+  contactPut[1].value = '';
+  contactPut[2].value = '';
 }
 
 
@@ -273,3 +295,15 @@ function slg(f){
 
   popo[slideIndex - 1].style.display = 'flex';  
 }
+
+
+
+
+
+
+
+
+
+
+
+  

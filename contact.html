@@ -29,11 +29,11 @@
                     <span onclick="contactHide()" id="hide" title="close">&times;</span>
                     <h1>Booking Form</h1>
                     <p class="message_info_title">Includes Michelin Pilot Sport 4S tires</p>
-                    <input type="text" name="firstname" placeholder="Name">
+                    <input  class="bookForm" type="text" name="firstname" placeholder="Name">
                     <p class="write"></p>
-                    <input type="text" name="subject" placeholder="Subject">
+                    <input  class="bookForm" type="text" name="subject" placeholder="Subject">
                     <p class="write"></p>
-                    <input type="text" name="email" placeholder="Email">
+                    <input  class="bookForm" type="text" name="email" placeholder="Email">
                     <p class="write"></p>
                     <textarea cols="22" rows="6" placeholder="Message"></textarea>
                     <a href="#" id="sendBtn" class="send">send</a>
@@ -43,8 +43,7 @@
                     <span class="close">&times;</span>
                     <img src="assets/media/img/check.icon.png" width="70px" height="70px" alt="check icon" title="check icon">
                     <h2 class="thank">Thank you!</h2>
-                    <p>Your message has been
-                    sent successfully.</p>
+                    <p>Your message has been sent successfully.</p>
                 </div>
             </div>
         </div>
@@ -60,13 +59,16 @@
                 </div>
                 </div>
                 <h2>Message Us</h2>
-                <form class="page4_form" action="#">
-                    <input type="text" name="firstname" placeholder="FirstName">
-                    <input type="text" name="subject" placeholder="Subject">
-                    <input type="text" name="email" placeholder="Email">
-                    <textarea cols="22" rows="6" placeholder="Message"></textarea>
-                    <a class="page4_send" href="#">Send</a>
+                <form action="#!" method="post" class="page4_form">
+                        <input class="putForm" type="text" name="firstname" placeholder="Name">
+                        <p class="wrong"></p>
+                        <input class="putForm" type="text" name="subject" placeholder="Subject">
+                        <p class="wrong"></p>
+                        <input class="putForm" type="text" name="email" placeholder="Email">
+                        <p class="wrong"></p>
+                        <textarea cols="22" rows="6" placeholder="Message"></textarea>
                 </form>
+                <button onclick="cntcFunction()" class="page4_send"> Send </button>
             </div>
             </aside>
             <div class="page4_map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.7871574058536!2d44.76858851481154!3d41.78980047891538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446ddea1eacd23%3A0xb93e11e0a901833a!2z4YOX4YOU4YOS4YOU4YOi4YOQIOGDm-GDneGDouGDneGDoOGDoeGDmA!5e0!3m2!1ska!2sge!4v1557558597172!5m2!1ska!2sge" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
