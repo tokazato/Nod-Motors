@@ -1,4 +1,5 @@
 
+
 // ------------- lazy load ------------
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // })
 
 
-  // ------------- check every input value Thank form after book ------------
+  // ------------- Book: check form input, progress bar,  thanks form ------------
 
    var modal = document.getElementById('myModal');
     var btn = document.getElementById("sendBtn");
@@ -73,9 +74,39 @@ document.addEventListener("DOMContentLoaded", function() {
       if ( !/...@.../.test(put[2].value)  ) { writeDown[2].innerHTML = 'Please Write Down Your Email' }; 
       if ( /...@.../.test(put[2].value ) ) { writeDown[2].innerHTML = '' }; 
 
-      if (put[0].value.length > 4 && put[1].value.length > 4 && /...@.../.test(put[2].value )) { modal.style.display = "block" }
+      if (put[0].value.length > 4 && put[1].value.length > 4 && /...@.../.test(put[2].value )) {
+         
+        function move() {
+          var bookProgress = document.getElementById('myProgress');
+          var bookBar = document.getElementById("myBar");   
+          var width = 1;
+          var id = setInterval(frame, 30);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+              bookProgress.style.display = 'none';
+              modal.style.display = "block" 
+            } else {
+              bookProgress.style.display = 'block';
+              width++; 
+              bookBar.style.width = width + '%'; 
+              bookBar.innerHTML = width * 1  + '%';
+            }
+          }
+          if ( bookProgress.style.display == 'none'){
+           
+          }
+        }
+        move()
+        
+        
+        
+        }
   }
 
+
+
+// ------------------ contact page: check form input, progress bar,  thanks form --------------------
 
   var wrongText = document.getElementsByClassName('wrong');
   var contactPut = document.getElementsByClassName("putForm");
@@ -91,14 +122,32 @@ document.addEventListener("DOMContentLoaded", function() {
     if ( /...@.../.test(contactPut[2].value ) ) { wrongText[2].innerHTML = '' }; 
   
     if (contactPut[0].value.length > 4 && contactPut[1].value.length > 4 && /...@.../.test(contactPut[2].value )){ 
-      contact.style.display = "block" ;
-      modal.style.display = "block" 
-      
+  
+      function move() {
+        var contactProgress = document.getElementById('cntProgress');
+        var contactBar = document.getElementById("cntBar");   
+        var width = 1;
+        var id = setInterval(frame, 30);
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+            contactProgress.style.display = 'none';
+            contact.style.display = "block";
+            modal.style.display = "block";
+          } else {
+            contactProgress.style.display = 'block';
+            width++; 
+            contactBar.style.width = width + '%'; 
+            contactBar.innerHTML = width * 1  + '%';
+          }
+        }
+        if ( contactProgress.style.display == 'none'){
+         
+        }
+      }
+      move()
     }
   }
- 
-
-
 
 
 
@@ -143,6 +192,7 @@ hide.onclick = function() {
   put[0].value = '';
   put[1].value = '';
   put[2].value = '';
+  document.getElementsByTagName('textarea')[0].value = '';
   contactPut[0].value = '';
   contactPut[1].value = '';
   contactPut[2].value = '';
@@ -295,6 +345,7 @@ function slg(f){
 
   popo[slideIndex - 1].style.display = 'flex';  
 }
+
 
 
 

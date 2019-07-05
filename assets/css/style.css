@@ -190,6 +190,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    cursor: pointer;
 }
 .send:hover {
     color: #fff;
@@ -197,6 +198,10 @@ a:hover {
 }
 .modal {
     display: none;
+    position: relative;
+    background: #fff;
+    height: 200vh;
+    width: 100%;
 }
 .close {
     font-size: 40px;
@@ -222,6 +227,37 @@ a:hover {
     text-align: center;
     width: 174px;
 }
+#myProgress, #cntProgress {
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    z-index: 99999;
+  }
+  #myBar,#cntBar {
+    background: linear-gradient(#6AB04C,#BADC58);
+    width: 1px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    z-index: 999999;
+    color: #fff;
+    border-radius: 10px;
+    left: 20%;
+  }
+  #cntProgress::before, #myProgress::before {
+      content: '';
+      background: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 88888;
+      opacity: 0.9;
+  }
 .main_pic {
     height: 58vmin; 
     width: 100%;
