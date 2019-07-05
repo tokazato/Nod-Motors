@@ -247,6 +247,9 @@ a:hover {
     border-radius: 10px;
     left: 20%;
   }
+  #cntBar {
+    left: 8%;
+  }
   #cntProgress::before, #myProgress::before {
       content: '';
       background: #fff;
