@@ -342,6 +342,7 @@ a:hover {
     width: 100%;
     position: relative;
     bottom: 65px;
+    cursor: pointer;
 }
 .hero_arrow::after {
     content: '>';
@@ -368,10 +369,16 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+.arrowBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 .down{
     display: flex;
     justify-content: flex-start;
     width: 100%; 
+    cursor: pointer;
 }
 .down::before {
     content: url(../media/img/scroll_down.png);

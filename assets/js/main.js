@@ -291,7 +291,6 @@ function addWhite(){
 
 
 
-
 // --------- show next section of car --------- 
 let bmwHide1 = document.getElementById('bmwHide1');
 let bmwHide2 = document.getElementById('bmwHide2')
@@ -348,6 +347,11 @@ function slg(f){
 
 
 
+
+// scroll down 
+function scrollDown() {
+  window.scrollBy(0, 630);
+}
 
 
 
