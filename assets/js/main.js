@@ -98,9 +98,6 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         }
         move()
-        
-        
-        
         }
   }
 
@@ -348,9 +345,45 @@ function slg(f){
 
 
 
-// scroll down 
+// ---------  scroll down ---------------- 
 function scrollDown() {
   window.scrollBy(0, 630);
+}
+
+
+
+
+// ----------- select option car --------------
+
+function changeFunc(){
+  var selectBox = document.getElementById("selectBox").value;
+  var allBmw = document.querySelectorAll('.cars > .bmw');
+  var alltsl = document.querySelectorAll('.cars > .tesla');
+  var noFound = document.getElementById('noFound');
+
+  if(selectBox == 'Tesla'){
+    for(let i = 0; i < allBmw.length; i++){
+      alltsl[i].style.display = 'flex';
+      allBmw[i].style.display = 'none';
+      noFound.style.display = 'none';
+    }
+  }
+
+  if(selectBox == 'BMW'){
+    for(let i = 0; i < allBmw.length; i++){
+      allBmw[i].style.display = 'flex';
+      alltsl[i].style.display = 'none';
+      noFound.style.display = 'none';
+    }
+  }
+
+  if(selectBox == 'Hyundai' || selectBox == 'Mercedes-Benz' || selectBox == 'Toyota' ){
+    for(let i = 0; i < allBmw.length; i++){
+      alltsl[i].style.display = 'none';
+      allBmw[i].style.display = 'none';
+      noFound.style.display = 'block';
+    }
+  }
 }
 
 

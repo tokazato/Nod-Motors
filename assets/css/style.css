@@ -512,6 +512,13 @@ select:hover {
     color: gray;
     padding: 10px;
 }
+#noFound {
+    font-size: 15vmin;
+    display: none;
+    color: rgba(224, 24, 24, 0.664);
+    font-weight: normal;
+    margin-bottom: 50px;
+}
 footer p {
     color: rgb(177, 177, 177);
     font-size: 12px;

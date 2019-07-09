@@ -80,11 +80,11 @@
         <p class="menu_h1_p" >Please Use for optimal results</p>
         <form class="select_car" action="#" method="GET">
             <div class="menu_select">
-                <select name="Manufacturer">
+                <select id="selectBox" onchange="changeFunc()"  name="Manufacturer">
                     <option selected hidden value="Manufacturer">Manufacturer<span>&darr;</span></option></option> 
                     <option value="Tesla">Tesla</option>
                     <option value="Mercedes-Benz">Mercedes-Benz</option>
-                    <option value="Bmw">Bmw</option>
+                    <option value="BMW">BMW</option>
                     <option value="Toyota">Toyota</option>
                     <option value="Hyundai">Hyundai</option>
                 </select>
@@ -214,6 +214,7 @@
                         <span class="cars_km">302 km/hp</span>
                     </div>
                 </li>
+                <div id="noFound">No results found</div>
             </ul>
     </section>
     <footer>  
