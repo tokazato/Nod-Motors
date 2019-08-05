@@ -684,7 +684,7 @@ footer p {
     position: relative;
     top: 80px; 
 }
-.arrow1::before, .prev {
+.prev {
     content: '<';
     background: #A1CE54;
     border-radius: 30px;
@@ -698,7 +698,7 @@ footer p {
     align-items: center;
     cursor: pointer;
 }
-.arrow1::after, .next  {
+.next  {
     content: '>';
     background: #181818;
     border-radius: 30px;
@@ -717,23 +717,39 @@ footer p {
 .arrow3::after {
     background: #A1CE54;
 }
-figure {
+.sliderBox {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+.sliderContent {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    transition: 0.9s ease;
 }
-figure img {
-    width: 256px;
+.sliderContent img {
     height: 180px;
+    width: auto;
     border-radius: 10px;
-    margin-right: 20px;
-}
-.figure_5 {
+    margin: 0 5px;
     opacity: 0.3;
+    cursor: pointer;
+    transition: 0.9s ease;
 }
 .page2_menu_h1_p {
     margin-bottom: 56px;
     font-size: 10px;
     color: lightgray;
+}
+.sliderContent img.active {
+    height: 200px;
+    opacity: 1;
 }
 
 
@@ -965,10 +981,6 @@ figure img {
     #teslaHide1, #teslaHide2, #teslaHide3, #bmwHide1, #bmwHide2, #bmwHide3 {
         display: none;
      }
-   
-    .figure_2, .figure_3, .figure_4, .figure_5{
-        display: none;
-    }
     .page4_section1 {
         height: 100%; 
         width: 100%;
@@ -996,11 +1008,6 @@ figure img {
         width: 100%; 
     }
     
-}
-@media only screen and (min-width: 500px) {
-    .figure_2 {
-        display: flex;
-    }
 }
 @media only screen and (min-width: 680px) {
     .tesla  {
@@ -1107,9 +1114,6 @@ figure img {
     #teslaHide1, #teslaHide2, #teslaHide3 {
         display: flex;
      }
-    .figure_3 {
-        display: flex;
-    }
     .page4_section1 {
         height: 540px;
         width: 100%;
@@ -1162,9 +1166,7 @@ figure img {
         width: 440px;
         height: 376px;
     }
-    .figure_4 {
-        display: flex;
-    }
+    
     
     
 }
@@ -1174,9 +1176,7 @@ figure img {
     .hero_content::before {
         display: flex;
     }
-    .figure_5{
-        display: flex;
-    }
+    
 }
 
 @media only screen and (min-height: 0px) {

@@ -394,4 +394,125 @@ function changeFunc(){
 
 
 
+
+
+// start jquery 
+$(document).ready(function(){
+
+  // car design pics object
+  var carDizainPics = [
+    {
+      active: true,
+      img: 'gallery_1.png',
+      id: 0
+    },
+    {
+      active: false,
+      img: 'gallery_2.png',
+      id: 1
+    },
+    {
+      active: false,
+      img: 'gallery_3.png',
+      id: 2
+    },
+    {
+      active: false,
+      img: 'gallery_4.png',
+      id: 3
+    },
+    {
+      active: false,
+      img: 'gallery_5.jpg',
+      id: 4
+    },
+    {
+      active: false,
+      img: 'gallery_1.png',
+      id: 5
+    },
+    {
+      active: false,
+      img: 'gallery_2.png',
+      id: 6
+    },
+    {
+      active: false,
+      img: 'gallery_3.png',
+      id: 7
+    },
+    {
+      active: false,
+      img: 'gallery_4.png',
+      id: 8
+    },
+    {
+      active: false,
+      img: 'gallery_5.jpg',
+      id: 9
+    },
+  ];
+
+// dynamically car design img in html
+  function imgDizain(){
+    for(let i = 0; i < carDizainPics.length; i++ ){ 
+    var cardynamicimg = $(`<img class="lazy ${carDizainPics[i].active ? 'active' : ''} "src="assets/media/img/${carDizainPics[i].img}" data-id="${carDizainPics[i].id}" alt="tesla" title="Tesla">`)
+    $('figure').append(cardynamicimg)}
+  }
+  imgDizain()
+
+// slider car design pic
+  var currentleft = 0;
+
+  // go left
+    $('.arrow1 .prev').on('click', function(){
+      if(currentleft >= 0){
+        $('.sliderContent').css('left', '0px');
+        return
+      }
+      currentleft += 133;
+     $('.sliderContent').css('left', currentleft + 'px');
+    });
+  
+// go right
+  $('.arrow1 .next').on('click', function(){
+    if(currentleft <= -2375) {
+      $('.sliderContent').css('left', '-2375px');
+     return
+    }
+    currentleft -= 133;
+    $('.sliderContent').css('left', currentleft  + 'px');
+  });
+
+// remove and add active class on click 
+  $('.sliderContent img').on('click', function(){
+    // var currentIdPosition = $('.active').data('id');
+    // var newIdPosition = $(this).data('id');
+   
+    // if(currentIdPosition < newIdPosition){
+    //  currentleft -= 260
+    // }
+    // if(currentIdPosition > newIdPosition){
+    //   currentleft += 260
+    //  }
+    // $('.sliderContent').css('left', currentleft + 'px' );
+
+    $('.sliderContent img').removeClass('active');
+    $(this).addClass('active')
+  });
+
+
+
+  
+
+// end jquery
+});
+
+
+
+
+
+
+
+
   
