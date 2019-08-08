@@ -138,9 +138,6 @@ document.addEventListener("DOMContentLoaded", function() {
             contactBar.innerHTML = width * 1  + '%';
           }
         }
-        if ( contactProgress.style.display == 'none'){
-         
-        }
       }
       move()
     }
@@ -347,7 +344,16 @@ function slg(f){
 
 // ---------  scroll down ---------------- 
 function scrollDown() {
-  window.scrollBy(0, 630);
+  var x = 1;
+  var st = setInterval(scrollEase, 30);
+  function scrollEase(){
+    if(x >= 110){
+      clearInterval(st);
+    } else {
+      x += 10;
+      window.scrollBy(0, x);
+    }
+  }
 }
 
 
