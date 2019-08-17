@@ -61,21 +61,34 @@ document.addEventListener("DOMContentLoaded", function() {
     var sendbtn2 = document.getElementById('btnSend2');
     var put = document.getElementsByClassName("bookForm");
     var writeDown = document.getElementsByClassName('write');
+
+
+    put[0].onkeyup = function() {
+      if ( put[0].value.length < 4 ) { writeDown[0].innerHTML = 'Please Write Down min. 4 letters' }
+      if(put[0].value.length >= 4 ){ writeDown[0].innerHTML = '' }
+    }
+    put[1].onkeyup = function() {
+      if ( put[1].value.length < 4 ) { writeDown[1].innerHTML = 'Please Write Down min. 4 letters' }
+      if (put[1].value.length >= 4){  writeDown[1].innerHTML = '' };
+    }
+    put[2].onkeyup = function() {
+      if ( !/...@.../.test(put[2].value)  ) { writeDown[2].innerHTML = 'Please Write Down Your Email' }; 
+      if ( /...@.../.test(put[2].value ) ) { writeDown[2].innerHTML = '' }; 
+    }
   
   
   btn.onclick = function() {
 
       if ( put[0].value.length < 4 ) { writeDown[0].innerHTML = 'Please Write Down min. 4 letters' }
-      if(put[0].value.length > 4 ){ writeDown[0].innerHTML = '' }
+      if(put[0].value.length >= 4 ){ writeDown[0].innerHTML = '' }
 
       if ( put[1].value.length < 4 ) { writeDown[1].innerHTML = 'Please Write Down min. 4 letters' }
-      if (put[1].value.length > 4){  writeDown[1].innerHTML = '' };
+      if (put[1].value.length >= 4){  writeDown[1].innerHTML = '' };
 
       if ( !/...@.../.test(put[2].value)  ) { writeDown[2].innerHTML = 'Please Write Down Your Email' }; 
       if ( /...@.../.test(put[2].value ) ) { writeDown[2].innerHTML = '' }; 
 
-      if (put[0].value.length > 4 && put[1].value.length > 4 && /...@.../.test(put[2].value )) {
-         
+      if (put[0].value.length >= 4 && put[1].value.length >= 4 && /...@.../.test(put[2].value )) {
         function move() {
           var bookProgress = document.getElementById('myProgress');
           var bookBar = document.getElementById("myBar");   
@@ -103,12 +116,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// ------------------ contact page: check form input, progress bar,  thanks form --------------------
+// // ------------------ contact page: check form input, progress bar,  thanks form --------------------
 
   var wrongText = document.getElementsByClassName('wrong');
   var contactPut = document.getElementsByClassName("putForm");
-  function cntcFunction() {
 
+  // contactPut[0].onkeyup = function() {
+  //   if (contactPut[0].value.length < 4){ wrongText[0].innerHTML = 'Please Write Down min. 4 letters'};
+  //   if (contactPut[0].value.length >= 4 ){ wrongText[0].innerHTML = '' };
+  // }
+  // contactPut[1].onkeyup = function() {
+  //   if ( contactPut[1].value.length < 4 ) { wrongText[1].innerHTML = 'Please Write Down min. 4 letters' };
+  //   if ( contactPut[1].value.length >= 4){  wrongText[1].innerHTML = '' };
+  // }
+  // contactPut[2].onkeyup = function() {
+  //   if ( !/...@.../.test(contactPut[2].value)  ) { wrongText[2].innerHTML = 'Please Write Down Your Email' }; 
+  //   if ( /...@.../.test(contactPut[2].value ) ) { wrongText[2].innerHTML = '' }; 
+  // }
+
+  function cntcFunction() {
     if (contactPut[0].value.length < 4){ wrongText[0].innerHTML = 'Please Write Down min. 4 letters'};
     if (contactPut[0].value.length > 4 ){ wrongText[0].innerHTML = '' };
   
@@ -118,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if ( !/...@.../.test(contactPut[2].value)  ) { wrongText[2].innerHTML = 'Please Write Down Your Email' }; 
     if ( /...@.../.test(contactPut[2].value ) ) { wrongText[2].innerHTML = '' }; 
   
-    if (contactPut[0].value.length > 4 && contactPut[1].value.length > 4 && /...@.../.test(contactPut[2].value )){ 
+    if (contactPut[0].value.length >= 4 && contactPut[1].value.length >= 4 && /...@.../.test(contactPut[2].value )){ 
   
       function move() {
         var contactProgress = document.getElementById('cntProgress');
@@ -148,8 +174,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ------------- open nav by burger ------------
 
-const burgeri = document.querySelector(".burger");
-const navbarMenu = document.getElementById('menu');
+var burgeri = document.querySelector(".burger");
+var navbarMenu = document.getElementById('menu');
 
 burgeri.addEventListener("click", burgerClick);
 
